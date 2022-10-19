@@ -1,5 +1,5 @@
 # default config
-baseURL = "https://tiagaogarciadev.github.io/tecnomenal/"
+baseURL = "https://tiagogarciadev.github.io/tecnomenal/"
 languageCode = "es_ES"
 title = "Tecnomenal"
 theme = "parsa-hugo_tg"
