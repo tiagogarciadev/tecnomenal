@@ -1,0 +1,98 @@
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <!--
+  <title>{{ .Site.Title }}</title> -->
+  
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">-->
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ hugo.Generator }}
+
+  {{ "<!-- plugins -->" | safeHTML }}
+  {{ range .Site.Params.plugins.css }}
+  <link rel="stylesheet" href="{{ .link | absURL }} ">
+  {{ end }}
+
+  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  {{ $styles := resources.Get "css/style.css" | minify }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
+
+  <link rel="stylesheet" href="{{ `css/cookie-notice.css` | absURL }}" />
+  <link rel="stylesheet" href="{{ `css/pop-up-tg.css` | absURL }}" />
+
+
+  {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
+
+  {{ if (eq .Type "gallery-fullscreen") }}
+  <meta name="robots" content="noindex,follow"/>
+  {{ end }}
+
+  {{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta name="twitter:description" content="{{ .Description }}" />
+  
+  {{ else if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify }}">
+  <meta property="og:description" content="{{ .Summary | plainify }}" />
+  <meta name="twitter:description" content="{{ .Summary | plainify }}" />
+  
+  {{ else if eq .URL `/blog/` }}
+  <meta name="description" content="Narrativa breve. Creación literaria para principiantes y avanzados. ¿Qué es un escritor y cómo se vive de ello? Entra para averiguarlo. Únete a nuestra comunidad">
+  <meta property="og:description" content="Narrativa breve. Creación literaria para principiantes y avanzados. ¿Qué es un escritor y cómo se vive de ello? Entra para averiguarlo. Únete a nuestra comunidad" />
+  <meta name="twitter:description" content="Narrativa breve. Creación literaria para principiantes y avanzados. ¿Qué es un escritor y cómo se vive de ello? Entra para averiguarlo. Únete a nuestra comunidad" />
+  
+  {{ else }}
+  <meta name="description" content="Relatos literarios cortos mexicanos para hispanohablantes. Narrativa contemporánea. Aquí encontrarás a los mejores autores de nuestros tiempos.">
+  <meta property="og:description" content="Relatos literarios cortos mexicanos para hispanohablantes. Narrativa contemporánea. Aquí encontrarás a los mejores autores de nuestros tiempos." />
+  <meta name="twitter:description" content="{{ .Description }}" />
+  
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta property="og:url" content="{{ .Permalink }}" itemprop="url" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="article:publisher" content="{{ .Site.Params.facebook }}" />
+  <meta property="article:tag" content="{{ .Site.Taxonomies.tag  }}" />
+  <meta property="article:section" content="{{ .Section }}" />
+  <meta property="article:published_time" content= "{{ .PublishDate.Format "2006-01-02T15:04:05+07:00" | safeHTML }}" />
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05+07:00" | safeHTML }}"  />
+  <meta property="og:updated_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}" />
+  {{ with .Params.image }}  
+  <meta property="og:image" content="{{ . | absURL }}" />
+  <meta property="og:image:secure_url" content="{{ . | absURL }}" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1200" />
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{ end }}
+  <meta name="twitter:card" content="summary" />
+  <!--<meta name="twitter:description" content="{{ .Description }}" />    {{ .Summary | plainify }}-->
+  <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />  
+  <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+  <script data-ad-client="ca-pub-2433639163415222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57VPPPZ7X0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-57VPPPZ7X0');
+</script>
+
+<script data-ad-client="ca-pub-2433639163415222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{{ `js/list-builder.js` | absURL }}"></script> <!--/js/list-builder.js-->
+
+</head>

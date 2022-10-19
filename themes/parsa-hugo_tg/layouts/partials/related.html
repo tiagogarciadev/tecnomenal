@@ -1,0 +1,23 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3>También te puede interesar:</h3>
+<ul>
+	{{ range . }}
+	<!--<li><a href="{{ .RelPermalink }}">{{ .Title }}</a>-->
+    <div class="media mb-4">
+      <div class="post-thumb-sm mr-3">
+        <a href="{{ .Permalink }}"><img class="mr-3 post-thumb-sm" src="{{ .Params.Image | absURL }}"></a>
+      </div>
+      <div class="media-body">
+        <ul class="list-inline d-flex justify-content-between mb-2">
+          <li class="list-inline-item">Post By {{.Site.Params.author}}</li>
+          <li class="list-inline-item">{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+        </ul>
+        <h6><a class="text-dark" href="{{ .Permalink }}">{{.Title}}</a></h6>
+      </div>
+    </div>
+    
+    <!--</li>-->
+	{{ end }}
+</ul>
+{{ end }}

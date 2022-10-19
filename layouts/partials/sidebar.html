@@ -1,0 +1,82 @@
+<div class="col-lg-4">
+  <div class="widget search-box">
+    <form action="{{ .Site.BaseURL }}/search">
+      <i class="ti-search"></i>
+      <input class="form-control border-0 pl-5" type="search" placeholder="Search" id="search-query" name="s">
+    </form>
+  </div>
+<div class="widget">
+    <h6 class="mb-4">ESTAMOS LEYENDO</h6>
+    <div><center>
+    <img src="/images/mientras_esperaba_por_ti_tiago_garcia_ebook.jpg" style="width:50%!important"></center></div>
+   <div><h7><br><strong>14 Relatos de amores incomprendidos</strong></h7>
+        <p><br>
+            Leemos este libro como parte de nuestras actividades del club de lectura. <br><br> Suscríbete a la newsletter para recibir la lista de libros del mes.<br> También, escríbenos en el formulario de contacto si quieres que leamos tu libro.
+            
+        </p> 
+        </div>
+  </div>
+
+
+
+
+  <div class="widget">
+    <h6 class="mb-4">POST RECIENTES</h6>
+    {{ range first 3 ( where .Site.Pages "Type" "post") }}
+    <div class="media mb-4">
+      <div class="post-thumb-sm mr-3">
+        <a href="{{ .Permalink }}"><img class="mr-3 post-thumb-sm" src="{{ .Params.Image | absURL }}"></a>
+      </div>
+      <div class="media-body">
+        <ul class="list-inline d-flex justify-content-between mb-2">
+          <li class="list-inline-item">Post By {{.Site.Params.author}}</li>
+          <li class="list-inline-item">{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+        </ul>
+        <h6><a class="text-dark" href="{{ .Permalink }}">{{.Title}}</a></h6>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  
+  <div class="widget">
+    <h6 class="mb-4">CATEGORÍAS</h6>
+    {{- if isset .Site.Taxonomies "categories" }}
+    {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+    <ul class="list-inline tag-list">
+      {{- range $name, $items := .Site.Taxonomies.categories }}
+      
+      <li class="" style="border-top:1px solid rgba(0,0,0,.1);"><a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title | humanize }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- end }}
+  </div>
+
+  <div class="widget">
+    <h6 class="mb-4">TUTORIALES DE LITERATURA POR NIVEL</h6>
+      <ul class="list-inline tag-list">
+        <li class="" style="border-top:1px solid rgba(0,0,0,.1);"><a href="{{ "tags/básico/" | relLangURL }}">Básico</a></li>
+        <li class="" style="border-top:1px solid rgba(0,0,0,.1);"><a href="{{ "tags/intermedio/" | relLangURL }}">Intermedio</a></li>
+        <li class="" style="border-top:1px solid rgba(0,0,0,.1);"><a href="{{ "tags/avanzado/" | relLangURL }}">Avanzado</a></li>
+      </ul>
+    
+    
+  </div>
+  <div class="widget"><h6 class="mb-4">APOYA ESTE BLOG</h6>
+  <p align="center">Si te gustan los artículos de este blog, puedes ayudarme a mantenerlo activo a través de estos medios. Tu aportación me será muy útil para cubrir los costes del mantenimiento y seguir en línea.
+  <br><br><a class="btn btn-main" href="https://paypal.me/tiagogarciafoto">Apoyar en Paypal</a><br><br>
+  <a href="https://www.patreon.com/bePatron?u=39058221" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+  </div>
+  <div class="widget">
+    <h6 class="mb-4">TAGS</h6>
+    {{- if isset .Site.Taxonomies "tags" }}
+    {{- if not (eq (len .Site.Taxonomies.tags) 0) }}
+    <ul class="list-inline tag-list">
+      {{- range $name, $items := .Site.Taxonomies.tags }}
+      <li class="list-inline-item m-1" ><a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | humanize }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- end }}
+  </div>
+</div>

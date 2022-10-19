@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Tecnomenal</title>
+    <link>https://tiagaogarciadev.github.io/tecnomenal/categories/blog/</link>
+    <description>Recent content in Blog on Tecnomenal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es_ES</language>
+    <lastBuildDate>Tue, 06 Aug 2019 09:02:56 +0730</lastBuildDate>
+    
+	<atom:link href="https://tiagaogarciadev.github.io/tecnomenal/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acerca de Tiago García, escritor de narrativa.</title>
+      <link>https://tiagaogarciadev.github.io/tecnomenal/acerca-de-mi/</link>
+      <pubDate>Tue, 06 Aug 2019 09:02:56 +0730</pubDate>
+      
+      <guid>https://tiagaogarciadev.github.io/tecnomenal/acerca-de-mi/</guid>
+      <description>Visión. Tecnomenal es un espacio dedicado a la divulgación de la ciencia y la tecnología.</description>
+    </item>
+    
+  </channel>
+</rss>

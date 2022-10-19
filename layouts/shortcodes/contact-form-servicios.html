@@ -1,0 +1,37 @@
+<section>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+
+ <div class="container" style="background-color:#fdefe6;">
+            <div class="row">
+             <div class="col-lg-12">
+                    <form action="{{ .Site.Params.contact_form_action }}" class="row mt-5" id="contactForm">
+                      <div class="col-lg-6">Tu Nombre:
+                        <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+                      </div>
+                      <div class="col-lg-6">Tu Email:  
+                        <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email">
+                      </div>
+                      <div class="col-lg-6">
+                       Fecha requerida: <input type="date" class="form-control mb-4" name="date" id="date" placeholder="Fecha de la sesión">
+                      </div>
+                      <div class="col-12">¿De qué se trata la sesión?
+                        <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
+                      </div>
+                      <div class="col" ><p align="left">
+                        <input type="checkbox" class="mb-4" checked="true" name="promo" id="promo" > Recibir boletín de promociones</p>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Preguntar por mi sesión</button>
+                      </div>
+                  </form>
+              </div>
+            </div>
+  
+   </div>
+
+
+
+</section>

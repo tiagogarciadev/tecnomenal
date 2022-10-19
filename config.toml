@@ -1,0 +1,148 @@
+# default config
+baseURL = "https://tiagaogarciadev.github.io/tecnomenal/"
+languageCode = "es_ES"
+title = "Tecnomenal"
+theme = "parsa-hugo_tg"
+summaryLength = "10"
+paginate = 6
+
+# output
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "css/hugo-easy-gallery.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/headroom/headroom.js"
+[[params.plugins.js]]
+link = "plugins/instafeed/instafeed.min.js"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+[[params.plugins.js]]
+link = "plugins/smooth-scroll/smooth-scroll.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/jQuery/scriptTG.js"
+[[params.plugins.js]]
+link = "/js/load-photoswipe.js"
+# navigation
+[[menu.main]]
+name = "Libros"
+URL = "libros"
+weight = 2
+
+
+
+# navigation
+[[menu.main]]
+name = "Tutoriales"
+URL = "blog"
+weight = 2
+
+
+#navigation
+[[menu.main]]
+name = "Podcast"
+URL = "podcast-cuadernosandantes"
+weight = 3
+
+
+
+
+
+# navigation
+[[menu.main]]
+name = "¿Quién soy?"
+URL = "acerca-de-mi"
+weight = 2
+
+[[menu.main]]
+name = "Contacto"
+URL = "contacto"
+weight = 3
+
+# deult parameter
+[params]
+
+Privacidad = "../politica-de-privacidad/"
+Cookies = "../politica-de-cookies/"
+Construccion="../wp-content/uploads/siteimages/carrot-updating-or-repairing_by-David-Revoy.jpg"
+
+logo = "../images/tecnomenal_logo.png"
+home = "Home"
+# theme layout ( two layout is available, "1" and "2" )
+layout = "1"
+# Meta data
+description = "This is meta description"
+# Preloader
+preloader = true
+# search***
+search = true
+# about author
+author = "Tiago García"
+author_image = "../wp-content/uploads/2017/04/tiagogarciafoto-perfil-150x150.jpg"
+bio = "Tiago García es escritor y fotógrafo. Participa activamente en la promoción de la lectura y la fotografía en su ciudad natal, Monterrey"
+facebook="https://facebook.com/tiagogarciafoto/"
+twitter="@tiagogarciafoto"
+# Contact info
+mobile = "+90 000 333 22"
+email = "tiagogarciafoto@gmail.com"
+address = "6 rip carl Avenue CA 90733"
+# Contact Form Action
+contact_form_action = "#"
+# Google Analitycs
+google_analitycs_id = "G-57VPPPZ7X0"
+# copyright
+copyright = "Copyright &copy; 2020 a theme by Tecnomenal & [themefisher.com](themefisher.com)"
+#disqusShortname
+disqusShortname = "fiagogarciafoto"
+
+
+# Instagram feed
+[params.instafeed]
+enable = true
+access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
+# social site
+[[params.social]]
+icon = "ti-facebook"
+URL = "https://facebook.com/tiagogarcifoto/"
+
+# social site
+[[params.social]]
+icon = "ti-instagram"
+URL = "https://instagram.com/writtenbytiago/"
+
+[[params.social]]
+icon = "ti-twitter-alt"
+URL = "https://twitter.com/writtenbytiago/"
+
+[[params.social]]
+icon = "ti-youtube"
+URL = "https://youtube.com/c/tiagogarciafoto/"
+
+[[params.social]]
+icon = "ti-github"
+URL = "https://amazon.com/author/tiagogarcia/"

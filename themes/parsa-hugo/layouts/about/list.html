@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="mb-4">El Autor</h2>
+        <img src="{{.Params.Image | absURL }}" alt="En la foto: El autor" class="img-fluid w-100 mb-4">
+                
+<br><br>
+Tiago García es escritor de narrativa, autor de “Mientras esperaba por ti: 14 Relatos de amores incomprendidos”. Sus  novelas románticas y Sci-fi son publicadas a través de Amazon.
+<br><br>
+Nació en Monterrey, Nuevo León, en el año de 1986. Obtuvo una licenciatura en Ciencias computacionales por la Facultad de Ciencias Físico-Matemáticas de la UANL.
+<br><br>
+En 2008 Empieza su carrera literaria bajo el seudónimo de Santiago García Monterrey, que conservaría hasta 2012. Durante ese tiempo participó activamente en grupos de vanguardia literaria en su localidad, entre sus participaciones más destacadas de ese periodo se hallan el Encuentro Nacional de Escritores Jóvenes, Encuentro Internacional de escritores marcianos, Veladas literarias del Poniente.
+<br><br>
+A partir del 2012 destacan sus publicaciones en medios impresos y de divulgación digital en el género del relato fantástico, figurando en publicaciones como la revista Comala, 15diario, el fanzine Contrafuerte, Escrituras Indie y la revista de Letras Hispánicas del departamento de letras de la universidad de Irvine California, con relatos como Sudoku, Möebius, Acerca de las oportunidades.
+<br><br>
+Hacia finales de ese mismo año, funda el colectivo El Regio Común junto su colega, el escritor Eduardo Benítez, con la misión de difundir el fomento a la lectura en la región. Una de las principales intervenciones de este colectivo, en 2015, fue la mesa de lectura El Regio Común: El cuento, en el marco de las festividades del 50 aniversario del ITNL.
+<br><br>
+Paralelamente, ocurre un hito en sus incursiones fotográficas con la exposición individual “Ciudad Vampira”, en el salón polivalente de esa institución, la aparición de sus fotografías en la revista Photography Master Class y en el directorio de fotógrafos latinoamericanos.
+<br><br>
+En 2017 participa en la semana de veladas literarias Voces de Cartón, organizada por la casa de la cultura de Nuevo León. Sus relatos cortos aparecen en revistas tales como Liebre de fuego y sirven como antecedentes argumentales a una de sus actuales novelas. 
+<br><br>
+En 2018 participa en el Congreso Internacional de Literatura con sede en Linares, en mesas de debate que abordan temas como el boom latinoamericano, el libro digital versus el libro impreso y las nuevas herramientas de creación literaria.
+<br><br>
+Actualmente reside en Monterrey, Nuevo León y se encuentra desarrollando una saga de novelas.
+<br><br>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{partial "instafeed.html" . }}
+
+{{ end }}

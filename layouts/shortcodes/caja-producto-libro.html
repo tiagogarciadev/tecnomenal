@@ -1,0 +1,72 @@
+<!--{{- $id := .Get "id" | default (.Get 0) -}}-->
+{{- $titulo := .Get "titulo" | default (.Get 0) -}}
+{{- $titulo_libro := .Get "titulo_libro" | default (.Get 1) -}}
+{{- $sinopsis := .Get "sinopsis" | default (.Get 2) -}}
+{{- $paginas := .Get "paginas" | default (.Get 3) -}}
+{{- $idioma := .Get "idioma" | default (.Get 4) -}}
+{{- $fecha := .Get "fecha" | default (.Get 5) -}}
+{{- $isbn := .Get "isbn" | default (.Get 6) -}}
+{{- $enlace := .Get "enlace" | default (.Get 7) -}}
+{{- $img := .Get "img" | default (.Get 8) -}}
+{{- $numresenas := .Get "numresenas" | default (.Get 9) -}}
+{{- $edad := .Get "edad" | default (.Get 10) -}}
+
+<div class="aawp">
+
+<h3 class="has-text-align-center" id="rgb"><span class="ez-toc-section" id="{{ $titulo }}"></span><a href="{{ $enlace }}" target="_blank" rel="noreferrer noopener"><strong>{{ $titulo }}</strong></a><span class="ez-toc-section-end"></span></h3>            
+            
+<div class="aawp-product aawp-product--vertical" data-aawp-product-id="{{ $isbn }}" data-aawp-product-title="{{ $titulo }}" data-aawp-click-tracking="title">
+
+    
+    <a class="aawp-product__image--link aawp-product__image" href="{{ $enlace }}" title="{{ $titulo }}" rel="nofollow" target="_blank">
+        <img class="aawp-product__image" src="{{ $img }}" alt="{{ $titulo }}">
+    </a>
+
+    <div class="aawp-product__content">
+        <a class="aawp-product__title" href="{{ $enlace }}" title="{{ $titulo }}" rel="nofollow" target="_blank">
+           {{ $titulo_libro }}         </a>
+
+        <div class="aawp-product__meta">
+                                                                <span class="aawp-product__reviews">({{ $numresenas}} Reseñas)</span>
+                            
+            <a class="aawp-check-prime" href="{{ $enlace }}" title="Amazon Prime" rel="nofollow" target="_blank"></a>        </div>
+    </div>
+
+    <div class="aawp-product__footer">
+
+        <div class="aawp-product__pricing">
+
+            
+                    </div>
+
+                <a class="aawp-button aawp-button--buy aawp-button aawp-button--amazon aawp-button--icon aawp-button--icon-black" href="{{ $enlace }}" title="Ver en Amazon" target="_blank" rel="nofollow">Ver en Amazon</a>
+            </div>
+</div>
+
+    
+</div>
+
+<div class="wp-block-columns">
+    <div class="wp-block-column">
+    <p class="has-text-align-center"><strong>Sinopsis:</strong></p>
+
+
+    <p class="has-text-align-center">
+    {{ $sinopsis }}
+    </p>
+
+
+
+    <p><br></p>
+    </div>
+
+
+
+    <div class="wp-block-column">
+    <p class="has-text-align-center"><strong>Ficha Técnica</strong></p>
+
+
+
+    <ul><li><strong>Edad recomendada:</strong> {{ $edad }}</li><li><strong>Número de páginas:</strong> {{ $paginas }}</li><li><strong>Fecha de publicación</strong>: {{ $fecha }}</li><li><strong>Idioma:</strong> {{ $idioma }}</li><li><strong>ISBN:</strong> {{ $isbn }}</li></ul>
+    </div>
+</div>

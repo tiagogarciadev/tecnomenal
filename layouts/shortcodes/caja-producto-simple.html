@@ -1,0 +1,90 @@
+<!--{{- $id := .Get "id" | default (.Get 0) -}}-->
+{{- $titulo := .Get "titulo" | default (.Get 0) -}}
+{{- $titulo_libro := .Get "titulo_libro" | default (.Get 1) -}}
+{{- $titulo_caracteristicas := .Get "titulo_caracteristicas" | default (.Get 2) -}}
+{{- $paginas := .Get "paginas" | default (.Get 3) -}}
+{{- $idioma := .Get "idioma" | default (.Get 4) -}}
+{{- $fecha := .Get "fecha" | default (.Get 5) -}}
+{{- $isbn := .Get "isbn" | default (.Get 6) -}}
+{{- $enlace := .Get "enlace" | default (.Get 7) -}}
+{{- $img := .Get "img" | default (.Get 8) -}}
+{{- $numresenas := .Get "numresenas" | default (.Get 9) -}}
+{{- $caracteristicas1 := .Get "caracteristicas1" | default (.Get 10) -}}
+{{- $caracteristicas2 := .Get "caracteristicas2" | default (.Get 11) -}}
+{{- $caracteristicas3 := .Get "caracteristicas3" | default (.Get 12) -}}
+{{- $caracteristicas4 := .Get "caracteristicas4" | default (.Get 13) -}}
+
+{{- $dimensiones1 := .Get "dimensiones1" | default (.Get 14) -}}
+{{- $dimensiones2 := .Get "dimensiones2" | default (.Get 15) -}}
+{{- $dimensiones3 := .Get "dimensiones3" | default (.Get 16) -}}
+{{- $dimensiones4 := .Get "dimensiones4" | default (.Get 17) -}}
+
+<div class="aawp">
+
+<h3 class="has-text-align-center" id="rgb"><span class="ez-toc-section" id="{{ $titulo }}"></span><a href="{{ $enlace }}" target="_blank" rel="noreferrer noopener"><strong>{{ $titulo }}</strong></a><span class="ez-toc-section-end"></span></h3>            
+            
+<div class="aawp-product aawp-product--vertical" data-aawp-product-id="{{ $isbn }}" data-aawp-product-title="{{ $titulo }}" data-aawp-click-tracking="title">
+
+    
+    <a class="aawp-product__image--link aawp-product__image" href="{{ $enlace }}" title="{{ $titulo }}" rel="nofollow" target="_blank">
+        <img class="aawp-product__image" src="{{ $img }}" alt="{{ $titulo }}">
+    </a>
+
+    <div class="aawp-product__content">
+        <a class="aawp-product__title" href="{{ $enlace }}" title="{{ $titulo }}" rel="nofollow" target="_blank">
+           {{ $titulo_libro }}         </a>
+
+        <div class="aawp-product__meta">
+                                                                <span class="aawp-product__reviews">({{ $numresenas}} Reseñas)</span>
+                            
+            <a class="aawp-check-prime" href="{{ $enlace }}" title="Amazon Prime" rel="nofollow" target="_blank"></a>        </div>
+    </div>
+
+    <div class="aawp-product__footer">
+
+        <div class="aawp-product__pricing">
+
+            
+                    </div>
+
+                <a class="aawp-button aawp-button--buy aawp-button aawp-button--amazon aawp-button--icon aawp-button--icon-black" href="{{ $enlace }}" title="Ver en Amazon" target="_blank" rel="nofollow">Ver en Amazon</a>
+            </div>
+</div>
+
+    
+</div>
+
+<div class="wp-block-columns">
+    <div class="wp-block-column">
+    <p class="has-text-align-center"><strong>{{ $titulo_caracteristicas }}</strong></p>
+
+
+    <p class="has-text-align-center">
+    <ul>
+    <li>{{$caracteristicas1}}</li>
+    <li>{{$caracteristicas2}}</li>
+    <li>{{$caracteristicas3}}</li>
+    <li>{{$caracteristicas4}}</li>
+    </ul>
+    </p>
+
+
+
+    <p><br></p>
+    </div>
+
+
+
+    <div class="wp-block-column">
+    <p class="has-text-align-center"><strong>Ficha Técnica:</strong></p>
+    <ul>
+    
+    <li>{{ $dimensiones1 }}</li>
+    <li>{{ $dimensiones2 }}</li>
+    <li>{{ $dimensiones3 }}</li>
+    <li>{{ $dimensiones4 }}</li>
+    </ul>
+
+    
+    </div>
+</div>

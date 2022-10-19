@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tecnomenal</title>
+    <link>https://tiagaogarciadev.github.io/tecnomenal/tags/</link>
+    <description>Recent content in Tags on Tecnomenal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es_ES</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:02:56 +0730</lastBuildDate>
+    
+	<atom:link href="https://tiagaogarciadev.github.io/tecnomenal/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Básico</title>
+      <link>https://tiagaogarciadev.github.io/tecnomenal/tags/b%C3%A1sico/</link>
+      <pubDate>Fri, 01 Oct 2021 09:02:56 +0730</pubDate>
+      
+      <guid>https://tiagaogarciadev.github.io/tecnomenal/tags/b%C3%A1sico/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+  {{ define "main" }}
+
+<!-- page-title -->
+{{  if (or (eq .Type "page" ) (eq .Type "gallery-fullscreen" ) )}}
+
+{{ else }}
+<section class="section bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>{{ .Title }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page-title -->
+{{ end }}
+<!-- blog single -->
+{{  if (or (eq .Type "featured")  (eq .Type "page" ) (eq .Type "gallery-fullscreen" ))}}
+  {{ if (eq .Type "gallery-fullscreen") }} <div class=""> {{ else }} <div class="container"> {{ end }}
+        <article class="content">
+          <img src="{{.Params.Image | absURL }}" alt="" class="img-fluid rounded float-left mr-5 mb-4">
+          {{.Content}}
+        </article>
+  </div>
+{{ else }}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <ul class="list-inline d-flex justify-content-between py-3">
+          <li class="list-inline-item"><i class="ti-user mr-2"></i>Post by {{.Site.Params.author}}</li>
+          <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+        </ul>
+        <article class="content">
+        <div class="container" ><div class="col" ><div class="row"  >
+          <img src="{{.Params.Image | absURL }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4"></div>
+          <div class="row" > 
+          {{ $title := .Title }}  <!--Sharer de redes sociales-->
+          {{ $url := printf "%s" .Permalink | absLangURL }}
+          {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
+          <div id="sharing" class="container" ><br/>
+            <p align="right">
+              <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="text-dark" aria-label="share on Facebook">
+                 <i class="ti-facebook" style="font-size:25px!important; margin-right:1rem"></i>
+              </a>
+
+             <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="text-dark" aria-label="share on Twitter">
+                <i class="ti-twitter" style="font-size:25px!important; margin-right:1rem"></i>
+             </a>
+
+             <a href="mailto:?subject=Check%20out%20{{ $title }}.&body={{ $body }}" class="text-dark" aria-label="share on Email">
+               <i class="ti-email" style="font-size:25px!important; margin-right:1rem"></i>
+              </a>
+             <!-- LinkedIn -->
+              
+               
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $url }}&source={{ $url }}&title={{ $title }}&;summary={{ $title }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="text-dark">
+                  <i class="ti-linkedin" style="font-size:25px!important; margin-right:1rem"></i>
+                                    </a>
+               
+               
+
+              <!-- WhatsApp -->
+                
+                 
+                    <a href="whatsapp://send?text={{ $body }}" target="_blank" class="text-dark">
+                    <i class="ti-themify-favicon" style="font-size:25px!important; margin-right:1rem"></i>
+                    
+                    </a>
+                  
+                <!-- Pinterest -->
+                
+                 
+                    <a href="https://www.pinterest.com/pin/create/button/?description={{ $title }}&url={{ $url}}" target="_blank" class="text-dark">
+                    <i class="ti-pinterest" style="font-size:25px!important; margin-right:1rem"></i>
+                    
+                    </a>
+
+
+
+            </p></div><div>
+          </div>
+
+          {{.Content}}
+        </article>
+        {{partial "related.html" . }}
+      </div>
+      {{partial "sidebar.html" . }}
+    </div>
+  </div>
+</section>
+<!-- /blog single -->
+{{ end }}
+
+
+
+{{  if  (eq .Type "post" ) }}
+<!--{{ template "_internal/disqus.html" . }}-->   
+{{ partial "disqus.html" . }}
+{{ end }}
+
+{{ end }}

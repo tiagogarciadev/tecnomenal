@@ -1,0 +1,88 @@
+{{ define "main" }}
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+<section class="section">
+  <div class="container">
+    <center><h2>¿En qué puedo ayudarte?</h2></center><br/><br/>
+    <div class="row">
+      <div class="col">
+       
+
+
+
+
+       
+       <p> <strong>Pasa a saludar</strong>
+Por favor, siéntete libre de mandarme tus dudas, comentarios o inquietudes por este formulario. Te contestaré personalmente el correo en cuanto me sea posible.</p>
+       <p> <strong>¿Eres escritor y te gustaría que reseñase tu libro?</strong>
+Por favor, envíame un link a tu ebook a través de este formulario.
+También puedes solicitarme nuestro apartado postal.
+
+Nos reservamos el derecho editorial, esto quiere decir que su recepción no es garantía de su publicación.</p>
+<p><strong>
+Anunciantes.</strong> Si deseas alquilar un banner o la elaboración de un artículo patrocinado, valoración
+de producto o reseña por favor precísalo en este formulario. Recibirás a la vuelta nuestros espacios disponibles y tarifas.
+</p>
+<p><strong>Colaboraciones.</strong> Recibimos colaboraciones de artículos que estén estrechamente relacionados con la 
+escritura y la creación literaria. Toma en cuenta que el artículo deberá tener como mínimo 500 palabras.
+Puedes adjuntar un url con las imágenes que lo ilustran o bien enviarlo sin imágenes, nos encargaremos de colocarle algunas.
+
+Se permiten hasta dos enlaces a tu blog. No se permiten enlaces de afiliados. Al igual que en las reseñas
+nos reservamos el derecho editorial y el derecho a la corrección de estilo del artículo
+para que encaje con la línea editorial de este sitio.
+
+Si estás interesado, por favor adjunta el artículo por este medio. Te informaremos tanto si ha sido seleccionado como si no, a la brevedad.
+<br><br>
+Cualquier otra aclaración, puedes escribir un correo a info@tiagogarciafoto.com</p>
+
+        
+      </div>
+      <div class="col">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                 <!--<h2 class="mb-4">{{.Title}}</h2>-->
+                <img src="{{.Params.Image | absURL }}" alt="{{.Site.Params.author}}" class="img-fluid w-100 mb-4">
+                {{ .Content }}
+                <form action="{{ .Site.Params.contact_form_action }}" class="row mt-5" id="contactForm">
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+                  </div>
+                <div class="col-lg-6">
+                  <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email">
+                </div>
+              <div class="col-12">
+                  <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
+                </div>
+                <div class="col-12">
+                  <input type="hidden" name="date" id="date" class="form-control mb-4" placeholder="Message..." DISABLED >
+                </div>
+                <div class="col"><p align="left">
+                  <input type="checkbox" checked="true" name="promo" id="promo" class="mb-4" >He leído y acepto <a href="/politica-de-privacidad"> las políticas de privacidad</a></p>
+                </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+              </div>
+              </form>
+          </div>
+        </div>
+  
+    </div>
+      
+      
+    </div>
+
+
+
+    </div>  
+  </div>
+</section>
+
+<section class="section">
+  
+
+</section>
+
+<!--{{partial "instafeed.html" . }}-->
+
+{{ end }}

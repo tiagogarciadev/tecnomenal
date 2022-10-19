@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcast on Tecnomenal</title>
+    <link>https://tiagaogarciadev.github.io/tecnomenal/categories/podcast/</link>
+    <description>Recent content in Podcast on Tecnomenal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es_ES</language>
+    <lastBuildDate>Wed, 15 Jan 2020 09:02:56 +0730</lastBuildDate>
+    
+	<atom:link href="https://tiagaogarciadev.github.io/tecnomenal/categories/podcast/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cuadernos Andantes: El podcast</title>
+      <link>https://tiagaogarciadev.github.io/tecnomenal/podcast-cuadernosandantes/</link>
+      <pubDate>Wed, 15 Jan 2020 09:02:56 +0730</pubDate>
+      
+      <guid>https://tiagaogarciadev.github.io/tecnomenal/podcast-cuadernosandantes/</guid>
+      <description>Podcast Cuadernos Andantes Escucha estas cápsulas con los relatos de los artistas que han participado con nosotros en el proyecto Cuadernos Andantes.</description>
+    </item>
+    
+  </channel>
+</rss>
